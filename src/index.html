@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Blockly Demo: Fixed Blockly</title>
+  <title>Freire Bot - Oy&aacute; Que Legal</title>
   <script src="js/blockly_compressed.js"></script>
   <script src="js/javascript_compressed.js"></script>
   <script src="js/freireblocks.js"></script>
@@ -19,6 +19,8 @@
       font-weight: normal;
       letter-spacing: -0.05rem;
       color: #39ab5a;
+      margin: 0px 1vmax 0px 0px;
+      text-align: right;
     }
     @font-face {
       font-family: 'kid';
@@ -32,12 +34,23 @@
     .blocklyTreeRow {
       height: auto !important;
     }
+    #logooya {
+      float: left;
+      position: absolute;
+      margin-left: 1vmax;
+    }
+    .btn { 
+      text-align: right;
+    }
   </style>
 </head>
 <body>
-  <h1>Freirebot - Ferramenta de Programação para 1<sup>o</sup> a 3<sup>o</sup></h1>
-
-  <div id="blocklyDiv" style="height: 480px; width: 100%;"></div>
+    <img src='imgs/logo_oya.png' id='logooya'>
+  <h1>Freirebot - IDE fase 1</h1>
+  
+  <div id='blocklimit'>
+  <div id="blocklyDiv" style="height: 100%; width: 100%;"></div>
+  </div>
 
   <xml id="toolbox" style="display: none">
     <category name="Acao">
@@ -52,13 +65,30 @@
       <block type="espera"></block>
   </category>
   </xml>
+  <div class="btn">
   <button onclick="verCodigo()">Ver Codigo</button>
+  </div>
   <script>
+
+    var sh = window.innerHeight - 90;
+          document.getElementById(
+              "blocklimit").style.cssText = 'height: ' + sh + "px; width:100%;"
+
     var demoWorkspace = Blockly.inject('blocklyDiv',
         {media: 'media/',
          toolbox: document.getElementById('toolbox')});
          document.getElementById(":1.label").innerHTML = '<img src="imgs/menu_acao.png">';
          document.getElementById(":2.label").innerHTML = '<img src="imgs/menu_logica.png">';
+
+
+
+        var parentBlock = demoWorkspace.newBlock('looping');
+        var B = parentBlock;
+        console.log(parentBlock);
+        parentBlock.moveBy(70, 50)
+        parentBlock.initSvg();
+        parentBlock.render();
+
   </script>
 
   

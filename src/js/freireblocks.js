@@ -4,7 +4,7 @@ Blockly.Blocks['sonar'] = {
     this.appendDummyInput()
         .appendField(new Blockly.FieldImage("imgs/sonar.png", 32, 32, "*"));
     this.setOutput(true, null);
-    this.setColour(240);
+    this.setColour(247);
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -162,5 +162,26 @@ Blockly.JavaScript['se'] = function(block) {
   Blockly.JavaScript['espera'] = function(block) {
     var dropdown_milessegundos = block.getFieldValue('milessegundos');
     var code = 'delay('+ dropdown_milessegundos +');\n';
+    return code;
+  };
+
+  Blockly.Blocks['looping'] = {
+    init: function() {
+      this.appendStatementInput("main")
+          .setCheck(null)
+          .appendField(new Blockly.FieldImage("imgs/infinite.png", 64, 32, "*"));
+      this.setColour(300);
+   this.setTooltip("Todo sistema roda infinitamente todas as peças precisam estar dentro desta");
+   this.setHelpUrl("");
+    }
+  };
+
+
+  Blockly.JavaScript['looping'] = function(block) {
+    var statements_main = Blockly.JavaScript.statementToCode(block, 'main');
+    // TODO: Assemble JavaScript into code variable.
+    var code = 'void loop {\n' + 
+              statements_main + 
+              '\n}';
     return code;
   };
