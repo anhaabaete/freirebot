@@ -84,4 +84,83 @@ Blockly.JavaScript['se'] = function(block) {
   }; 
 
 
-  
+  Blockly.Blocks['olhos'] = {
+    init: function() {
+      this.appendDummyInput()
+          .appendField(new Blockly.FieldImage("imgs/olhos_vaz.png", 75, 32, "*"))
+          .appendField(new Blockly.FieldDropdown([
+              [{"src":"imgs/olhos_vaz.png","width":75,"height":32,"alt":"*"},"\"vazio\""], 
+              [{"src":"imgs/olhos_tra.png","width":75,"height":32,"alt":"*"},"\"tranquilo\""], 
+              [{"src":"imgs/olhos_did.png","width":75,"height":32,"alt":"*"},"\"olha_did\""], 
+              [{"src":"imgs/olhos_die.png","width":75,"height":32,"alt":"*"},"\"olha_die\""], 
+              [{"src":"imgs/olhos_dsd.png","width":75,"height":32,"alt":"*"},"\"olha_dsd\""], 
+              [{"src":"imgs/olhos_dse.png","width":75,"height":32,"alt":"*"},"\"olha_dse\""], 
+              [{"src":"imgs/olhos_son.png","width":75,"height":32,"alt":"*"},"\"cansado\""], 
+              [{"src":"imgs/olhos_bra.png","width":75,"height":32,"alt":"*"},"\"bravo\""], 
+              [{"src":"imgs/olhos_est.png","width":75,"height":32,"alt":"*"},"\"estrela\""], 
+              [{"src":"imgs/olhos_cor.png","width":75,"height":32,"alt":"*"},"\"coracao\""]]), 
+                "tipo_olhar");
+      this.setPreviousStatement(true, null);
+      this.setNextStatement(true, null);
+      this.setColour(230);
+   this.setTooltip("Selecione o olhar do robô");
+   this.setHelpUrl("http://freirebot;oyaquelegal.org/manual/blocks/olhos");
+    }
+  };
+
+
+  Blockly.JavaScript['olhos'] = function(block) {
+    var dropdown_tipo_olhar = block.getFieldValue('tipo_olhar');
+
+    var code = 'olhos(' + dropdown_tipo_olhar + ');\n';
+    return code;
+  };
+
+  Blockly.Blocks['cabeca'] = {
+    init: function() {
+      this.appendDummyInput()
+          .appendField(new Blockly.FieldImage("imgs/cabeca_frente.png", 64, 58, "*"))
+          .appendField(new Blockly.FieldDropdown([
+            [{"src":"imgs/cabeca_esquerda.png","width":59,"height":58,"alt":"*"},"\"esquerda\""], 
+            [{"src":"imgs/cabeca_direita.png","width":59,"height":58,"alt":"*"},"\"direita\""], 
+            [{"src":"imgs/cabeca_frente.png","width":64,"height":58,"alt":"*"},"\"frente\""]]), 
+            "virar");
+      this.setPreviousStatement(true, null);
+      this.setNextStatement(true, null);
+      this.setColour(315);
+   this.setTooltip("Selecione para onde você quer que o robo rode a cabeça!");
+   this.setHelpUrl("https://freirebot.oyaquelegal.com/manual/block/cabeca");
+    }
+  };
+
+  Blockly.JavaScript['cabeca'] = function(block) {
+    var dropdown_virar = block.getFieldValue('virar');
+    // TODO: Assemble JavaScript into code variable.
+    var code = 'virarCabeca(' + dropdown_virar + ');\n';
+    return code;
+  };
+
+  Blockly.Blocks['espera'] = {
+    init: function() {
+      this.appendDummyInput()
+          .appendField(new Blockly.FieldImage("imgs/pare.png", 32, 32, "*"))
+          .appendField(new Blockly.FieldDropdown([
+            ["- - ","2000"], 
+            ["- - -","3000"], 
+            ["- - - - -","5000"], 
+            ["- - - - - - - -","8000"], 
+            ["- - - - - - - - - - - - -","13000"]]), 
+            "milessegundos");
+      this.setPreviousStatement(true, null);
+      this.setNextStatement(true, null);
+      this.setColour(0);
+   this.setTooltip("");
+   this.setHelpUrl("https://freirebot.oyaquelegal.com/manual/block/espera");
+    }
+  };
+
+  Blockly.JavaScript['espera'] = function(block) {
+    var dropdown_milessegundos = block.getFieldValue('milessegundos');
+    var code = 'delay('+ dropdown_milessegundos +');\n';
+    return code;
+  };

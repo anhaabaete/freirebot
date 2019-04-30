@@ -4,38 +4,61 @@
   <meta charset="utf-8">
   <title>Blockly Demo: Fixed Blockly</title>
   <script src="js/blockly_compressed.js"></script>
-  <script src="js/blocks_compressed.js"></script>
   <script src="js/javascript_compressed.js"></script>
   <script src="js/freireblocks.js"></script>
   <script src="js/msg/en.js"></script>
   <script src="js/main.js"></script>
   <style>
     body {
-      background-color: #fff;
-      font-family: sans-serif;
+      background-color: rgb(122, 255, 113);
+      font-family: kid;
+      margin: 0px;
+      background: url("imgs/fundo1.png");
     }
     h1 {
       font-weight: normal;
-      font-size: 140%;
+      letter-spacing: -0.05rem;
+      color: #39ab5a;
+    }
+    @font-face {
+      font-family: 'kid';
+      src: url('fonts/Lalezar-Regular.ttf');
+    }
+
+    sup {
+      font-size: small;
+    }
+    
+    .blocklyTreeRow {
+      height: auto !important;
     }
   </style>
 </head>
 <body>
-  <h1>FreireBot Code</h1>
+  <h1>Freirebot - Ferramenta de Programação para 1<sup>o</sup> a 3<sup>o</sup></h1>
 
-  <div id="blocklyDiv" style="height: 480px; width: 600px;"></div>
+  <div id="blocklyDiv" style="height: 480px; width: 100%;"></div>
 
   <xml id="toolbox" style="display: none">
-    <block type="se"></block>
-    <block type="sonar"></block>
-    <block type="wheel_r"></block>
-    <block type="wheel_l"></block>
+    <category name="Acao">
+      <block type="sonar"></block>
+      <block type="olhos"></block>
+      <block type="cabeca"></block>
+      <block type="wheel_r"></block>
+      <block type="wheel_l"></block>
+    </category>
+    <category name="Logica">
+      <block type="se"></block>
+      <block type="espera"></block>
+  </category>
   </xml>
   <button onclick="verCodigo()">Ver Codigo</button>
   <script>
     var demoWorkspace = Blockly.inject('blocklyDiv',
         {media: 'media/',
          toolbox: document.getElementById('toolbox')});
+         document.getElementById(":1.label").innerHTML = '<img src="imgs/menu_acao.png">';
+         document.getElementById(":2.label").innerHTML = '<img src="imgs/menu_logica.png">';
   </script>
 
   
