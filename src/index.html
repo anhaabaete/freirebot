@@ -45,6 +45,7 @@
             }
             .menu {
                 margin: 5%;
+                background-color: #ccc;
             }
             .menu:hover {
                 border: solid thin #000;
@@ -77,6 +78,15 @@
                 color: black;
                 margin-left: 128px;
             }
+            
+@media (max-height: 680px) 
+{
+  .hrd
+   {
+    display: none;
+   }
+}
+
         </style>
 
     </head>
@@ -86,20 +96,20 @@
             <div class='bemvindo'>
             Bem vindo ao IDE do FreireBOT 
             </div>
-            <div class="menu rainbowh rna" data-link="1">
-                <img src="imgs/cabeca_frente.png"> Representativo N&atilde;o Alfab&eacute;tico
+            <div class="menu rna" data-link="1">
+                <img src="imgs/cabeca_frente.png"> <span class='rainbowh'>Representativo N&atilde;o Alfab&eacute;tico<span>
                 <div>Neste contexto, a forma de programar &eacute; feita por objetos
                      representativos sem uso de letras ou n&uacute;meros.<br>
                      [PgLT 99], [PgLP 99]</div>
             </div>
-            <div class="menu rainbowh ran" data-link="2">
-                <img src="imgs/cabeca_frente.png"> Representativo Num&eacute;rico
+            <div class="menu ran" data-link="2">
+                <img src="imgs/cabeca_frente.png"> <span class='rainbowh'>Representativo Num&eacute;rico<span>
                 <div>Neste contexto, a forma de programar &eacute; feita por objetos 
                         representativos sem uso de letras, mas usando numerais.<br>
                     [PgLT 99], [PgLP 99]</div>
             </div>
-            <div class="menu rainbowh ra" data-link="3">
-                <img src="imgs/cabeca_frente.png"> Represetantivo Alfanum&eacute;rico
+            <div class="menu ra" data-link="3">
+                <img src="imgs/cabeca_frente.png"> <span class='rainbowh'>Represetantivo Alfanum&eacute;rico<span>
                 <div>Neste contexto, a forma de programar &eacute; feita por objetos 
                         representativos usando letras e numerais e se aprofundando em l&oacute;gica
                         com a linguagem.<br>
