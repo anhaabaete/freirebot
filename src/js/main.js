@@ -1,4 +1,7 @@
 
+/**
+ * Open File like download
+ */
 function abrirNoArduino() {
     var code = Blockly.JavaScript.workspaceToCode(demoWorkspace);
 
@@ -11,9 +14,16 @@ function abrirNoArduino() {
     link.href = 'data:text/ino;base64,' + code;
     document.body.appendChild(link);
     link.click();
-
+    link.id = 'tempa';
+    setTimeout(function() { //sanitize element
+        element = document.getElementById("tempa"); 
+        element.parentNode.removeChild(element);
+    }, 1000);
 }
 
+/**
+ * Function to create a beauty name to download
+ */
 function getFilename() {
     var dt = new Date();
     toString()

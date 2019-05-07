@@ -74,12 +74,42 @@
           document.getElementById(
               "blocklimit").style.cssText = 'height: ' + sh + "px; width:100%;"
 
+    
+        //carrega blocos
+        var fase = parseInt(location.hash.replace('#',''));
+        var setres = '';
+        if (fase==3) {
+          setres = '<block type="for"></block>'
+        }
+        console.log(fase);
+
+        if (isNaN(fase)) { 
+          location.href='index.html';
+        }
+
+            fase = '_'+fase;
+            document.getElementById('toolbox').innerHTML =
+            '<category name="Acao">' +
+            '<block type="sonar'+fase+'"></block>' +
+            '<block type="olhos'+fase+'"></block>' +
+            '<block type="cabeca'+fase+'"></block>' +
+            '<block type="wheel_r'+fase+'"></block>' +
+            '<block type="wheel_l'+fase+'"></block>' +
+            '</category>' +
+            '<category name="Logica">' +
+            '<block type="se'+fase+'"></block>' +
+            '<block type="espera'+fase+'"></block>' +
+            setres +
+            '</category>';
+          
+          console.log( document.getElementById('toolbox').innerHTML);
+
+
     var demoWorkspace = Blockly.inject('blocklyDiv',
         {media: 'media/',
          toolbox: document.getElementById('toolbox')});
          document.getElementById(":1.label").innerHTML = '<img src="imgs/menu_acao.png">';
          document.getElementById(":2.label").innerHTML = '<img src="imgs/menu_logica.png">';
-
 
 
         var parentBlock = demoWorkspace.newBlock('looping');
