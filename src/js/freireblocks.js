@@ -10,8 +10,8 @@ Blockly.Blocks['sonar_1'] = {
         .appendField(new Blockly.FieldImage("imgs/sonar.png", 32, 32, "*"));
     this.setOutput(true, null);
     this.setColour(247);
- this.setTooltip("");
- this.setHelpUrl("");
+  this.setTooltip("");
+  this.setHelpUrl("");
   }
 };
 Blockly.JavaScript['sonar_1'] = function(block) {
@@ -30,8 +30,8 @@ Blockly.Blocks['wheel_r_1'] = {
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour(150);
-   this.setTooltip("Faz executar passos num motor (roda) ");
-   this.setHelpUrl("https://freirebot.oyaquelegal.org/manuais/blocos/rodas");
+    this.setTooltip("Faz executar passos num motor (roda) ");
+    this.setHelpUrl("https://freirebot.oyaquelegal.org/manuais/blocos/rodas");
     }
 };
 Blockly.JavaScript['wheel_r_1'] = function(block) {
@@ -51,8 +51,8 @@ Blockly.Blocks['wheel_l_1'] = {
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour(150);
-   this.setTooltip("Faz executar passos num motor (roda) ");
-   this.setHelpUrl("https://freirebot.oyaquelegal.org/manuais/blocos/rodas");
+    this.setTooltip("Faz executar passos num motor (roda) ");
+    this.setHelpUrl("https://freirebot.oyaquelegal.org/manuais/blocos/rodas");
     }
 };
 
@@ -63,7 +63,7 @@ var code = 'runWheelL(' + dropdown_distance +');\n';
 return code;
 };   
 
- 	
+
 Blockly.Blocks['se_1'] = {
   init: function() {
     this.appendValueInput("se")
@@ -75,8 +75,8 @@ Blockly.Blocks['se_1'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(225);
- this.setTooltip("Condicional 'Se' Ex: 'Se' algo acontecer então faz o que está dentro");
- this.setHelpUrl("https://freirebot.oyaquelegal.org/manuais/blocos/se");
+    this.setTooltip("Condicional 'Se' Ex: 'Se' algo acontecer então faz o que está dentro");
+    this.setHelpUrl("https://freirebot.oyaquelegal.org/manuais/blocos/se");
   }
 };
 
@@ -109,7 +109,7 @@ Blockly.JavaScript['se_1'] = function(block) {
       this.setNextStatement(true, null);
       this.setColour(230);
    this.setTooltip("Selecione o olhar do robô");
-   this.setHelpUrl("http://freirebot;oyaquelegal.org/manual/blocks/olhos");
+   this.setHelpUrl("http://freirebot;oyaquelegal.org/manual/blocos/olhos");
     }
   };
 
@@ -134,7 +134,7 @@ Blockly.JavaScript['se_1'] = function(block) {
       this.setNextStatement(true, null);
       this.setColour(315);
    this.setTooltip("Selecione para onde você quer que o robo rode a cabeça!");
-   this.setHelpUrl("https://freirebot.oyaquelegal.com/manual/block/cabeca");
+   this.setHelpUrl("https://freirebot.oyaquelegal.com/manual/blocos/cabeca");
     }
   };
 
@@ -160,7 +160,7 @@ Blockly.JavaScript['se_1'] = function(block) {
       this.setNextStatement(true, null);
       this.setColour(0);
    this.setTooltip("");
-   this.setHelpUrl("https://freirebot.oyaquelegal.com/manual/block/espera");
+   this.setHelpUrl("https://freirebot.oyaquelegal.com/manual/blocos/espera");
     }
   };
 
@@ -283,7 +283,7 @@ Blockly.JavaScript['se_2'] = function(block) {
       this.setNextStatement(true, null);
       this.setColour(230);
    this.setTooltip("Selecione o olhar do robô");
-   this.setHelpUrl("http://freirebot;oyaquelegal.org/manual/blocks/olhos");
+   this.setHelpUrl("http://freirebot.oyaquelegal.org/manual/blocos/olhos");
     }
   };
 
@@ -308,7 +308,7 @@ Blockly.JavaScript['se_2'] = function(block) {
       this.setNextStatement(true, null);
       this.setColour(315);
    this.setTooltip("Selecione para onde você quer que o robo rode a cabeça!");
-   this.setHelpUrl("https://freirebot.oyaquelegal.com/manual/block/cabeca");
+   this.setHelpUrl("https://freirebot.oyaquelegal.com/manual/blocos/cabeca");
     }
   };
 
@@ -335,7 +335,7 @@ Blockly.JavaScript['se_2'] = function(block) {
       this.setNextStatement(true, null);
       this.setColour(0);
    this.setTooltip("");
-   this.setHelpUrl("https://freirebot.oyaquelegal.com/manual/block/espera");
+   this.setHelpUrl("https://freirebot.oyaquelegal.com/manual/blocos/espera");
     }
   };
 
@@ -476,7 +476,7 @@ Blockly.JavaScript['se_3'] = function(block) {
       this.setNextStatement(true, null);
       this.setColour(230);
    this.setTooltip("Selecione o olhar do robô");
-   this.setHelpUrl("http://freirebot;oyaquelegal.org/manual/blocks/olhos");
+   this.setHelpUrl("http://freirebot;oyaquelegal.org/manual/blocos/olhos");
     }
   };
 
@@ -501,7 +501,7 @@ Blockly.JavaScript['se_3'] = function(block) {
       this.setNextStatement(true, null);
       this.setColour(315);
    this.setTooltip("Selecione para onde você quer que o robo rode a cabeça!");
-   this.setHelpUrl("https://freirebot.oyaquelegal.com/manual/block/cabeca");
+   this.setHelpUrl("https://freirebot.oyaquelegal.com/manual/blocos/cabeca");
     }
   };
 
@@ -528,7 +528,7 @@ Blockly.JavaScript['se_3'] = function(block) {
       this.setNextStatement(true, null);
       this.setColour(0);
    this.setTooltip("");
-   this.setHelpUrl("https://freirebot.oyaquelegal.com/manual/block/espera");
+   this.setHelpUrl("https://freirebot.oyaquelegal.com/manual/blocos/espera");
     }
   };
 
