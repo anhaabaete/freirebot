@@ -1,0 +1,33 @@
+body {
+    background-color: rgb(122, 255, 113);
+    font-family: kid;
+    margin: 0px;
+    background: url("../imgs/fundo1.png");
+  }
+  h1 {
+    font-weight: normal;
+    letter-spacing: -0.05rem;
+    color: #39ab5a;
+    margin: 0px 1vmax 0px 0px;
+    text-align: right;
+  }
+  @font-face {
+    font-family: 'kid';
+    src: url('../fonts/PressStart2P-Regular.ttf');
+  }
+
+  sup {
+    font-size: small;
+  }
+  
+  .blocklyTreeRow {
+    height: auto !important;
+  }
+  #logooya {
+    float: left;
+    position: absolute;
+    margin-left: 1vmax;
+  }
+  .btn { 
+    text-align: right;
+  }
